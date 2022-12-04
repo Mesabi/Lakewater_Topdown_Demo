@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Player/Inventory.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Basic Shapes/Square.png" type="Texture" id=2]
+
+[node name="Inventory" type="Node2D"]
+position = Vector2( 86, 85 )
+script = ExtResource( 1 )
+
+[node name="Revolver_Box" type="Node2D" parent="."]
+
+[node name="Revolver" type="Label" parent="Revolver_Box"]
+margin_left = -60.0
+margin_top = -71.0
+margin_right = -5.0
+margin_bottom = -57.0
+text = "Revolver"
+
+[node name="Revolver_Chamber_Label" type="Label" parent="Revolver_Box"]
+margin_left = -76.0
+margin_top = -46.0
+margin_right = -11.0
+margin_bottom = -32.0
+text = "Chamber: "
+
+[node name="Revolver_Total_Ammo" type="Label" parent="Revolver_Box"]
+margin_left = -76.0
+margin_top = -21.0
+margin_right = -11.0
+margin_bottom = -7.0
+text = "Total: "
+
+[node name="Sprite" type="Sprite" parent="Revolver_Box"]
+position = Vector2( -27.5, -24.5 )
+scale = Vector2( 0.292188, 0.307813 )
+texture = ExtResource( 2 )
+
+[node name="Shotgun_Box" type="Node2D" parent="."]
+position = Vector2( 119, 1 )
+
+[node name="Sprite" type="Sprite" parent="Shotgun_Box"]
+position = Vector2( -27.5, -24.5 )
+scale = Vector2( 0.292188, 0.307813 )
+texture = ExtResource( 2 )
+
+[node name="Shotgun" type="Label" parent="Shotgun_Box"]
+margin_left = -60.0
+margin_top = -71.0
+margin_right = -5.0
+margin_bottom = -57.0
+text = "Shotgun"
+
+[node name="Key_Box" type="Node2D" parent="Shotgun_Box"]
+position = Vector2( 119, 1 )
+
+[node name="Sprite" type="Sprite" parent="Shotgun_Box/Key_Box"]
+position = Vector2( -27.5, -24.5 )
+scale = Vector2( 0.292188, 0.307813 )
+texture = ExtResource( 2 )
+
+[node name="Revolver" type="Label" parent="Shotgun_Box/Key_Box"]
+margin_left = -60.0
+margin_top = -71.0
+margin_right = -5.0
+margin_bottom = -57.0
+text = "Keys"
